@@ -56,7 +56,7 @@ class Selector
         $results = new Collection;
         foreach ($this->selectors as $selector) {
             $nodes = [$node];
-            if (count($selector) == 0) {
+            if (is_array($selector) && count($selector) == 0) {
                 continue;
             }
 
